@@ -1,0 +1,19 @@
+[package]
+name = "codegen"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Code generator for the C++ to Rust compiler - translates IR to target code"
+
+[dependencies]
+ir.workspace = true
+types.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+inkwell = { version = "0.4", features = ["llvm15-0"] }
+
+[features]
+default = []
+debug_codegen = []

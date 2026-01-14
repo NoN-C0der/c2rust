@@ -1,0 +1,29 @@
+[package]
+name = "driver"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Driver for the C++ to Rust compiler - main executable that orchestrates compilation pipeline"
+
+[[bin]]
+name = "c2rust"
+path = "src/main.rs"
+
+[dependencies]
+lexer.workspace = true
+parser.workspace = true
+ast.workspace = true
+semantic.workspace = true
+ir.workspace = true
+codegen.workspace = true
+clap.workspace = true
+log = "0.4"
+env_logger = "0.10"
+anyhow.workspace = true
+thiserror.workspace = true
+
+[features]
+default = []
+debug_driver = []

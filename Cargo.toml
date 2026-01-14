@@ -1,6 +1,41 @@
-[package]
-name = "c2rust"
-version = "0.1.0"
-edition = "2024"
+[workspace]
+members = [
+    "crates/lexer",
+    "crates/parser", 
+    "crates/ast",
+    "crates/semantic",
+    "crates/types",
+    "crates/ir",
+    "crates/codegen",
+    "crates/driver",
+    "crates/utils",
+    "crates/tests",
+]
+resolver = "2"
 
-[dependencies]
+[workspace.package]
+edition = "2021"
+version = "0.1.0"
+authors = ["Your Name <your.email@example.com>"]
+license = "MIT"
+repository = "https://github.com/yourusername/c2rust"
+
+[workspace.dependencies]
+# Internal crates
+lexer = { path = "./crates/lexer" }
+parser = { path = "./crates/parser" }
+ast = { path = "./crates/ast" }
+semantic = { path = "./crates/semantic" }
+types = { path = "./crates/types" }
+ir = { path = "./crates/ir" }
+codegen = { path = "./crates/codegen" }
+driver = { path = "./crates/driver" }
+utils = { path = "./crates/utils" }
+tests = { path = "./crates/tests" }
+
+# External dependencies
+logos = "0.13"
+serde = { version = "1.0", features = ["derive"] }
+anyhow = "1.0"
+thiserror = "1.0"
+clap = { version = "4.0", features = ["derive"] }

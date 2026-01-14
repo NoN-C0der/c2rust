@@ -1,0 +1,19 @@
+[package]
+name = "parser"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Parser for the C++ to Rust compiler - handles syntactic analysis of tokens"
+
+[dependencies]
+lexer.workspace = true
+ast.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+nom = "7.1"
+
+[features]
+default = []
+debug_parsing = []
