@@ -1,7 +1,7 @@
 //! Разрешение имён в C++ программе
 
 use crate::symbol_table::SymbolTable;
-use ast::node::{ASTNode, Expr, Statement};
+use ast::{ASTNode, Expr, Statement};
 
 #[derive(Debug, Clone, PartialEq)]
 pub enum NameResolutionError {
@@ -225,7 +225,7 @@ impl NameResolver {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use ast::node::{Expr, ASTNode};
+    use ast::{Expr, ASTNode};
 
     #[test]
     fn test_name_resolver_basic() {
@@ -234,7 +234,7 @@ mod tests {
         // Создаём объявление переменной: int x = 5;
         let decl = ASTNode::VariableDeclaration {
             name: "x".to_string(),
-            data_type: ast::node::Type::Int,
+            data_type: ast::Type::Int,
             initializer: Some(Box::new(Expr::IntegerLiteral(5))),
         };
         
@@ -251,14 +251,14 @@ mod tests {
         // Создаём выражение: x + y (где y не определена)
         let expr = ASTNode::Expression(Expr::BinaryOp {
             left: Box::new(Expr::Identifier("x".to_string())),
-            operator: ast::node::BinaryOperator::Add,
+            operator: ast::BinaryOperator::Add,
             right: Box::new(Expr::Identifier("y".to_string())),
         });
         
         // Сначала определяем x
         let x_decl = ASTNode::VariableDeclaration {
             name: "x".to_string(),
-            data_type: ast::node::Type::Int,
+            data_type: ast::Type::Int,
             initializer: Some(Box::new(Expr::IntegerLiteral(5))),
         };
         
