@@ -1,7 +1,7 @@
 //! Проверка типов для C++
 
 use crate::symbol_table::{SymbolTable, SymbolType};
-use ast::node::{ASTNode, Expr, Statement, Type as AstType, BinaryOperator, UnaryOperator};
+use ast::{ASTNode, Expr, Statement, Type as AstType, BinaryOperator, UnaryOperator};
 
 #[derive(Debug, Clone, PartialEq)]
 pub enum TypeError {
@@ -336,7 +336,7 @@ impl TypeChecker {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use ast::node::{ASTNode, Expr, BinaryOperator};
+    use ast::{ASTNode, Expr, BinaryOperator};
 
     #[test]
     fn test_type_checker_basic() {

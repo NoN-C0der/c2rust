@@ -1,6 +1,6 @@
 //! Интеграционные тесты для семантического анализа
 
-use ast::node::{ASTNode, Expr, BinaryOperator, Type};
+use ast::{ASTNode, Expr, BinaryOperator, Type};
 use semantic::{TypeChecker, NameResolver};
 
 #[test]
