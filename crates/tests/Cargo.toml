@@ -1,0 +1,31 @@
+[package]
+name = "tests"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Integration and unit tests for the C++ to Rust compiler"
+
+[lib]
+crate-type = ["lib"]
+
+[[test]]
+name = "integration_tests"
+path = "tests/integration.rs"
+
+[dev-dependencies]
+lexer.workspace = true
+parser.workspace = true
+ast.workspace = true
+semantic.workspace = true
+ir.workspace = true
+codegen.workspace = true
+
+[dependencies]
+anyhow.workspace = true
+thiserror.workspace = true
+
+[features]
+default = []
+debug_tests = []

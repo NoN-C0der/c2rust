@@ -1,0 +1,16 @@
+[package]
+name = "utils"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Utility functions for the C++ to Rust compiler - shared utilities and helpers"
+
+[dependencies]
+anyhow.workspace = true
+thiserror.workspace = true
+
+[features]
+default = []
+debug_utils = []

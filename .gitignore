@@ -1,0 +1,57 @@
+```
+# Rust/Cargo specific ignores
+target/
+Cargo.lock
+
+# Dependencies
+vendor/
+
+# Build artifacts
+**/*.rs.bk
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/*.so
+**/*.dylib
+**/*.dll
+**/*.exe
+**/*.o
+**/*.obj
+**/*.a
+**/*.lib
+
+# Testing and coverage
+**/test-results/
+**/coverage/
+**/.coverage
+**/htmlcov/
+
+# Logs
+*.log
+
+# Environment
+.env
+.env.local
+.env.*
+**/.env
+**/.env.local
+**/.env.*
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# OS generated
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+```

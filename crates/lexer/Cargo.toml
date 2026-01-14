@@ -1,0 +1,17 @@
+[package]
+name = "lexer"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Lexer for the C++ to Rust compiler - handles tokenization of source code"
+
+[dependencies]
+logos.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+
+[features]
+default = []
+debug_tokens = []

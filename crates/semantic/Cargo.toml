@@ -1,0 +1,19 @@
+[package]
+name = "semantic"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Semantic analyzer for the C++ to Rust compiler - handles type checking and validation"
+
+[dependencies]
+ast.workspace = true
+types.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+indexmap = "2.0"
+
+[features]
+default = []
+debug_semantic = []
