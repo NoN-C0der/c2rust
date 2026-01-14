@@ -8,7 +8,7 @@ repository.workspace = true
 description = "Abstract Syntax Tree for the C++ to Rust compiler - represents the parsed structure"
 
 [dependencies]
-serde.workspace = true
+serde = { workspace = true, optional = true }
 anyhow.workspace = true
 thiserror.workspace = true
 
