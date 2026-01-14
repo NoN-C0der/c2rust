@@ -1,45 +1,61 @@
 ```
-# Rust/Cargo specific
+# Rust/Cargo build artifacts
 target/
 Cargo.lock
-*.rs.bk
-**/*.d
+
+# Compiled binaries and object files
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.exe
 
 # Dependencies
 vendor/
 
-# Logs and temp files
+# Logs
 *.log
-*.tmp
-*.swp
 
-# Environment
+# Temporary files
+*.tmp
+*~
+.DS_Store
+Thumbs.db
+
+# Environment variables
 .env
 .env.local
-.env.*
+*.env.*
 
-# Editors
+# Editor-specific files
 .vscode/
 .idea/
 *.swp
 *.swo
 
-# OS generated files
-.DS_Store
-Thumbs.db
-
-# Coverage
+# Coverage reports
 coverage/
 htmlcov/
 .coverage
 
-# Build artifacts
+# Cache directories
+__pycache__/
+*.pyc
+*.pyo
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Testing
+.mypy_cache/
+.pytest_cache/
+.tox/
+
+# Distribution artifacts
 dist/
 build/
-*.out
-*.exe
-*.dll
-*.so
-*.a
-*.class
+*.egg-info/
 ```
