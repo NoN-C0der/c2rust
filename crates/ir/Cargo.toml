@@ -10,7 +10,7 @@ description = "Intermediate Representation for the C++ to Rust compiler - optimi
 [dependencies]
 ast.workspace = true
 types.workspace = true
-serde.workspace = true
+serde = { workspace = true, optional = true }
 anyhow.workspace = true
 thiserror.workspace = true
 
