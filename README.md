@@ -1,6 +1,6 @@
-# C++ to Rust Compiler
+# C++ Rust Compiler
 
-A compiler that translates C++ code to Rust code, written in Rust.
+A C++ compiler written in Rust.
 
 ## Project Structure
 
