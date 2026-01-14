@@ -14,6 +14,12 @@ jobs:
         curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
         echo "$HOME/.cargo/bin" >> $GITHUB_PATH
     
+    - name: Install LLVM 15.0
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y llvm-15 llvm-15-dev clang-15 libclang-15-dev
+        echo "LLVM_SYS_150_PREFIX=/usr/lib/llvm-15" >> $GITHUB_ENV
+    
     - name: Build
       run: cargo build --verbose
     
