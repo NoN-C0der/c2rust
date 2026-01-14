@@ -19,7 +19,7 @@ pub enum TemplateParameter {
     },
 }
 
-#[derive(Debug, Clone)]
+#[derive(Debug, Clone, PartialEq)]
 pub struct TemplateDeclaration {
     pub name: String,
     pub parameters: Vec<TemplateParameter>,
@@ -93,11 +93,12 @@ impl TemplateSystem {
     }
 
     pub fn specialize_template(&mut self, template_name: &str, specialization_args: &[TemplateArgument], body: String) -> Result<(), String> {
+        // Создаём ключ для специализации до получения изменяемой ссылки
+        let key = self.create_specialization_key(specialization_args);
+        
         let template = self.templates.get_mut(template_name)
             .ok_or_else(|| format!("Template '{}' not found", template_name))?;
 
-        // Создаём ключ для специализации
-        let key = self.create_specialization_key(specialization_args);
         template.specializations.insert(key, body);
         Ok(())
     }
