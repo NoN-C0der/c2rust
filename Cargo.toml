@@ -21,6 +21,19 @@ license = "MIT"
 repository = "https://github.com/yourusername/c2rust"
 
 [workspace.dependencies]
+# Internal crates
+lexer = { path = "./crates/lexer" }
+parser = { path = "./crates/parser" }
+ast = { path = "./crates/ast" }
+semantic = { path = "./crates/semantic" }
+types = { path = "./crates/types" }
+ir = { path = "./crates/ir" }
+codegen = { path = "./crates/codegen" }
+driver = { path = "./crates/driver" }
+utils = { path = "./crates/utils" }
+tests = { path = "./crates/tests" }
+
+# External dependencies
 logos = "0.13"
 serde = { version = "1.0", features = ["derive"] }
 anyhow = "1.0"

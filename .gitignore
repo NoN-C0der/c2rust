@@ -1,57 +1,45 @@
 ```
-# Rust/Cargo specific ignores
+# Rust/Cargo specific
 target/
 Cargo.lock
+*.rs.bk
+**/*.d
 
 # Dependencies
 vendor/
 
-# Build artifacts
-**/*.rs.bk
-**/*.pyc
-**/*.pyo
-**/*.pyd
-**/*.so
-**/*.dylib
-**/*.dll
-**/*.exe
-**/*.o
-**/*.obj
-**/*.a
-**/*.lib
-
-# Testing and coverage
-**/test-results/
-**/coverage/
-**/.coverage
-**/htmlcov/
-
-# Logs
+# Logs and temp files
 *.log
+*.tmp
+*.swp
 
 # Environment
 .env
 .env.local
 .env.*
-**/.env
-**/.env.local
-**/.env.*
 
-# Editor/IDE
+# Editors
 .vscode/
 .idea/
 *.swp
 *.swo
-*~
+
+# OS generated files
 .DS_Store
 Thumbs.db
 
-# OS generated
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+# Coverage
+coverage/
+htmlcov/
+.coverage
+
+# Build artifacts
+dist/
+build/
+*.out
+*.exe
+*.dll
+*.so
+*.a
+*.class
 ```
